@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RecSys RAG Tutorial</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f8f9fb;
+    }
+
+    header {
+      background: #1f2937;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: 1.1rem;
+      color: #d1d5db;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 12px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 24px;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #111827;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    .info-box {
+      background: #eef2ff;
+      border-left: 4px solid #4f46e5;
+      padding: 14px 18px;
+      margin-top: 16px;
+      border-radius: 8px;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .schedule-table th {
+      background: #f3f4f6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Retrieval-Augmented Generation for Recommender Systems</h1>
+    <p>A tutorial on retrieval, augmentation, and generation for LLM-based recommendation</p>
+  </header>
+
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#motivation">Motivation</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#materials">Materials</a>
+    <a href="#speakers">Speakers</a>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>
+        This tutorial introduces Retrieval-Augmented Generation (RAG) for recommender systems.
+        We discuss how retrieval, external knowledge, user history, item metadata, and large language
+        models can be combined to build more accurate, explainable, and interactive recommendation systems.
+      </p>
+
+      <div class="info-box">
+        <strong>Target audience:</strong> researchers and practitioners interested in recommender systems,
+        information retrieval, and large language models.
+      </div>
+    </section>
+
+    <section id="motivation">
+      <h2>Motivation</h2>
+      <p>
+        Large language models have shown strong reasoning and generation abilities, but they often lack
+        personalized, up-to-date, and domain-specific knowledge. RAG provides a practical framework for
+        grounding LLM-based recommendation in retrieved user, item, and contextual information.
+      </p>
+
+      <ul>
+        <li>How can retrieval improve LLM-based recommendation?</li>
+        <li>What should be retrieved: users, items, reviews, knowledge graphs, or demonstrations?</li>
+        <li>How should retrieved information be represented and injected into LLMs?</li>
+        <li>How can we evaluate RAG-based recommender systems?</li>
+      </ul>
+    </section>
+
+    <section id="schedule">
+      <h2>Tutorial Schedule</h2>
+      <table class="schedule-table">
+        <tr>
+          <th>Part</th>
+          <th>Topic</th>
+          <th>Time</th>
+        </tr>
+        <tr>
+          <td>Part 1</td>
+          <td>Background: Recommender Systems, LLMs, and RAG</td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <td>Part 2</td>
+          <td>Retrieval Sources and Augmentation Strategies</td>
+          <td>40 min</td>
+        </tr>
+        <tr>
+          <td>Part 3</td>
+          <td>RAG Architectures for Recommendation</td>
+          <td>40 min</td>
+        </tr>
+        <tr>
+          <td>Part 4</td>
+          <td>Evaluation, Challenges, and Future Directions</td>
+          <td>30 min</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="materials">
+      <h2>Materials</h2>
+      <ul>
+        <li><a href="#">Slides</a></li>
+        <li><a href="#">Survey Paper</a></li>
+        <li><a href="#">Code Repository</a></li>
+        <li><a href="#">Reading List</a></li>
+      </ul>
+    </section>
+
+    <section id="speakers">
+      <h2>Speakers</h2>
+      <p>
+        <strong>Geon Lee</strong><br />
+        Research Fellow, KAIST<br />
+        Research interests: recommender systems, graph learning, retrieval systems, and LLM-based reasoning.
+      </p>
+
+      <p>
+        <strong>Co-speaker Name</strong><br />
+        Affiliation<br />
+        Research interests: recommender systems, information retrieval, and large language models.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 RecSys RAG Tutorial. All rights reserved.
+  </footer>
+</body>
+</html>
